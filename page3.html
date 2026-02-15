@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Coffee?</title>
+<style>
+body {
+    text-align:center;
+    margin-top:150px;
+    font-family:Arial;
+    background:linear-gradient(135deg,#ffecd2,#fcb69f);
+}
+button {
+    padding:15px 30px;
+    font-size:18px;
+    margin:15px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+}
+#yes { background:#4CAF50; color:white; }
+#maybe { background:#ff9800; color:white; position:absolute; }
+#no { background:#f44336; color:white; position:absolute; }
+</style>
+</head>
+<body>
+
+<h1>Keep being yourself.</h1>
+<h2>You up for coffee?? ☕</h2>
+
+<button id="yes" onclick="location.href='page4.html'">Yes</button>
+<button id="maybe">Maybe</button>
+<button id="no">No</button>
+
+<script>
+const moveBtn = (btn) => {
+    btn.addEventListener("mouseover", () => {
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+        btn.style.left = x + "px";
+        btn.style.top = y + "px";
+    });
+};
+
+moveBtn(document.getElementById("maybe"));
+moveBtn(document.getElementById("no"));
+</script>
+
+</body>
+</html>
